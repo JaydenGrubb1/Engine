@@ -6,8 +6,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include "engine/test.h"
+#pragma once
 
-int test(int a, int b) {
-	return a + b;
-}
+int test(int a, int b);
