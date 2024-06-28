@@ -6,14 +6,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <cstdio>
-
 #include <vulkan/vulkan.hpp>
 
 #include <SDL.h>
 #include <SDL_vulkan.h>
 
 #include "engine/core/appinfo.h"
+#include "engine/core/logging.h"
 #include "engine/core/types.h"
 #include "engine/gfx/system.h"
 
@@ -33,13 +32,12 @@ namespace Engine::GFX {
 		}
 		// TODO: Configurable API version
 
-		std::printf("Vulkan: API version = %d.%d.%d-%d\n",
+		LOG_INFO("Vulkan: API version = {}.{}.{}-{}",
 			VK_API_VERSION_MAJOR(api_version),
 			VK_API_VERSION_MINOR(api_version),
 			VK_API_VERSION_PATCH(api_version),
 			VK_API_VERSION_VARIANT(api_version)
 		);
-		// TODO: Use logger
 		// TODO: Store API version somewhere
 
 		vk::ApplicationInfo app_info(
