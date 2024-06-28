@@ -12,10 +12,10 @@ namespace Engine::GFX {
 	/**
 	 * @brief Initialize the graphics subsystem
 	 */
-	void Init();
+	void init();
 
 	/**
-	 * @brief Shutdown the graphics subsystem
+	 * @brief shutdown the graphics subsystem
 	 */
-	void Shutdown();
+	void shutdown();
 }

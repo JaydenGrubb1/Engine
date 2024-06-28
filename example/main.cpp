@@ -12,14 +12,17 @@
 using namespace Engine;
 
 int main(int argc, char** argv) {
-	AppInfo::Get().name = "Example";
-	AppInfo::Get().SetVersion(1, 0, 0);
+	AppInfo::get().name = "Example";
+	AppInfo::get().setVersion(1, 0, 0);
 
-	Engine::Init(argc, argv);
-	GFX::Init();
+	Engine::init(argc, argv);
+	GFX::init();
 
 	GFX::Window window("Example", 800, 600);
+	window.setSize(800, 600);
+	window.setFullscreen(false);
+	window.setResizable(true);
 
-	Engine::Shutdown();
+	Engine::shutdown();
 	return EXIT_SUCCESS;
 }

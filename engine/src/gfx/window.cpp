@@ -25,22 +25,22 @@ namespace Engine::GFX {
 		SDL_DestroyWindow(reinterpret_cast<SDL_Window*>(m_window));
 	}
 
-	void Window::SetTitle(std::string_view title) {
+	void Window::setTitle(std::string_view title) {
 		SDL_SetWindowTitle(reinterpret_cast<SDL_Window*>(m_window), title.data());
 	}
 
-	void Window::SetSize(int width, int height) {
+	void Window::setSize(int width, int height) {
 		SDL_SetWindowSize(reinterpret_cast<SDL_Window*>(m_window), width, height);
 	}
 
-	void Window::SetFullscreen(bool fullscreen) {
+	void Window::setFullscreen(bool fullscreen) {
 		SDL_SetWindowFullscreen(
 			reinterpret_cast<SDL_Window*>(m_window),
 			fullscreen ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0
 		);
 	}
 
-	void Window::SetResizable(bool resizable) {
+	void Window::setResizable(bool resizable) {
 		SDL_SetWindowResizable(
 			reinterpret_cast<SDL_Window*>(m_window),
 			resizable ? SDL_TRUE : SDL_FALSE

@@ -17,7 +17,7 @@
 namespace Engine {
 	static std::vector<std::string_view> s_args;
 
-	void Init(int argc, char** argv) {
+	void init(int argc, char** argv) {
 		s_args = std::vector<std::string_view>(argv, argv + argc);
 
 		// TODO: Check does this even need to be done?
@@ -26,11 +26,11 @@ namespace Engine {
 		}
 	}
 
-	void Shutdown() {
+	void shutdown() {
 		SDL_Quit();
 	}
 
-	std::span<std::string_view> GetArgs() {
+	std::span<std::string_view> getArgs() {
 		return s_args;
 	}
 }

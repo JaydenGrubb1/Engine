@@ -15,10 +15,10 @@ namespace Engine::GFX {
 	 public:
 		Window(std::string_view title, int width, int height);
 		~Window();
-		void SetTitle(std::string_view title);
-		void SetSize(int width, int height);
-		void SetFullscreen(bool fullscreen);
-		void SetResizable(bool resizable);
+		void setTitle(std::string_view title);
+		void setSize(int width, int height);
+		void setFullscreen(bool fullscreen);
+		void setResizable(bool resizable);
 	 private:
 		void* m_window;
 	};

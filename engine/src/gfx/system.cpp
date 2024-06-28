@@ -23,7 +23,7 @@ static constexpr std::array VALIDATION_LAYERS = {
 namespace Engine::GFX {
 	static vk::Instance s_instance;
 
-	void Init() {
+	void init() {
 		SDL_InitSubSystem(SDL_INIT_VIDEO);
 
 		u32 api_version = vk::enumerateInstanceVersion();
@@ -41,8 +41,8 @@ namespace Engine::GFX {
 		// TODO: Store API version somewhere
 
 		vk::ApplicationInfo app_info(
-			AppInfo::Get().name.data(),
-			AppInfo::Get().version,
+			AppInfo::get().name.data(),
+			AppInfo::get().version,
 			"Engine",                        // TODO: Add engine name
 			VK_MAKE_API_VERSION(0, 1, 0, 0), // TODO: Add engine version
 			VK_API_VERSION_1_2                  // TODO: Identify the API version needed
@@ -61,7 +61,7 @@ namespace Engine::GFX {
 		}
 	}
 
-	void Shutdown() {
+	void shutdown() {
 		s_instance.destroy();
 	}
 }

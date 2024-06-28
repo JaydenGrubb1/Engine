@@ -24,15 +24,15 @@ namespace Engine {
 		 * @param minor The minor version
 		 * @param patch The patch version
 		 */
-		constexpr void SetVersion(u8 major = 1, u8 minor = 0, u8 patch = 0) {
+		constexpr void setVersion(u8 major = 1, u8 minor = 0, u8 patch = 0) {
 			version = (major << 22) | (minor << 12) | patch;
 		}
 
 		/**
-		 * @brief Get the version of the application
+		 * @brief get the version of the application
 		 * @return The version of the application
 		 */
-		[[nodiscard]] constexpr std::tuple<u8, u8, u8> GetVersion() const {
+		[[nodiscard]] constexpr std::tuple<u8, u8, u8> getVersion() const {
 			return std::make_tuple(
 				(version >> 22) & 0x3FF,
 				(version >> 12) & 0x3FF,
@@ -41,10 +41,10 @@ namespace Engine {
 		}
 
 		/**
-		 * @brief Get the application information
+		 * @brief get the application information
 		 * @return The application information
 		 */
-		[[nodiscard]] static AppInfo& Get() {
+		[[nodiscard]] static AppInfo& get() {
 			static AppInfo info;
 			return info;
 		}

@@ -17,16 +17,16 @@ namespace Engine {
 	 * @param argc The number of arguments
 	 * @param argv The arguments
 	 */
-	void Init(int argc = 0, char** argv = nullptr);
+	void init(int argc = 0, char** argv = nullptr);
 
 	/**
-	 * @brief Shutdown the engine
+	 * @brief shutdown the engine
 	 */
-	void Shutdown();
+	void shutdown();
 
 	/**
-	 * @brief Get the arguments passed to the application
+	 * @brief get the arguments passed to the application
 	 * @return A span of arguments
 	 */
-	std::span<std::string_view> GetArgs();
+	std::span<std::string_view> getArgs();
 }
