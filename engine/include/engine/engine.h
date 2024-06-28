@@ -9,6 +9,7 @@
 #pragma once
 
 #include "engine/core/appinfo.h"
+#include "engine/core/logging.h"
 #include "engine/core/system.h"
 #include "engine/core/types.h"
 
