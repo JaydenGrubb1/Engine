@@ -8,10 +8,14 @@
 
 #pragma once
 
-#include "engine/core/appinfo.h"
-#include "engine/core/system.h"
-#include "engine/core/types.h"
+namespace Engine::GFX {
+	/**
+	 * @brief Initialize the graphics subsystem
+	 */
+	void Init();
 
-#include "engine/gfx/system.h"
-
-// This file simply includes all the other headers in the engine
+	/**
+	 * @brief Shutdown the graphics subsystem
+	 */
+	void Shutdown();
+}

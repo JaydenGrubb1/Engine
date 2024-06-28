@@ -16,6 +16,7 @@ add_compile_options(
 
 set(ENGINE_SRC
 	core/system.cpp
+	gfx/system.cpp
 )
 
 list(TRANSFORM ENGINE_SRC PREPEND "${CMAKE_CURRENT_SOURCE_DIR}/src/")
