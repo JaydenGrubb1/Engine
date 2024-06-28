@@ -6,15 +6,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#include <cstdio>
 #include <cstdlib>
+#include <engine/engine.h>
+
+using namespace Engine;
 
 int main(int argc, char** argv) {
-	std::printf("Hello, World!\n");
+	AppInfo::Get().name = "Example";
+	AppInfo::Get().SetVersion(1, 0, 0);
 
-	for (int i = 0; i < argc; i++) {
-		std::printf("argv[%d] = %s\n", i, argv[i]);
-	}
+	Engine::Init(argc, argv);
+	GFX::Init();
 
+	GFX::Window window("Example", 800, 600);
+
+	Engine::Shutdown();
 	return EXIT_SUCCESS;
 }
