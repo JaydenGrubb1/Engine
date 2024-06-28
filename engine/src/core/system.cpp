@@ -12,7 +12,7 @@
 
 #include <SDL.h>
 
-#include "engine/core.h"
+#include "engine/core/system.h"
 
 namespace Engine {
 	static std::vector<std::string_view> s_args;

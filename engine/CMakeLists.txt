@@ -15,7 +15,7 @@ add_compile_options(
 )
 
 set(ENGINE_SRC
-	core.cpp
+	core/system.cpp
 )
 
 list(TRANSFORM ENGINE_SRC PREPEND "${CMAKE_CURRENT_SOURCE_DIR}/src/")
@@ -30,6 +30,7 @@ target_include_directories(${PROJECT_NAME}
 	PUBLIC
 	${CMAKE_CURRENT_SOURCE_DIR}/include
 	PRIVATE
+	${CMAKE_CURRENT_SOURCE_DIR}/src
 	${Vulkan_INCLUDE_DIRS}
 	${SDL2_INCLUDE_DIRS}
 )

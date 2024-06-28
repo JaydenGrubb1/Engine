@@ -8,4 +8,8 @@
 
 #pragma once
 
-int test(int a, int b);
+#include "engine/core/appinfo.h"
+#include "engine/core/system.h"
+#include "engine/core/types.h"
+
+// This file simply includes all the other headers in the engine
