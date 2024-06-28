@@ -13,5 +13,6 @@
 #include "engine/core/types.h"
 
 #include "engine/gfx/system.h"
+#include "engine/gfx/window.h"
 
 // This file simply includes all the other headers in the engine
