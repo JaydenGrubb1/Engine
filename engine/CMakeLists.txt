@@ -15,7 +15,7 @@ add_compile_options(
 )
 
 set(ENGINE_SRC
-	test.cpp
+	core.cpp
 )
 
 list(TRANSFORM ENGINE_SRC PREPEND "${CMAKE_CURRENT_SOURCE_DIR}/src/")
