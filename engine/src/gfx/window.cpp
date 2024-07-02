@@ -6,6 +6,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+#include <stdexcept>
+
 #include <SDL.h>
 
 #include "engine/gfx/window.h"
@@ -19,6 +21,9 @@ namespace Engine::GFX {
 			width, height,
 			SDL_WINDOW_VULKAN
 		);
+		if (m_window == nullptr) {
+			throw std::runtime_error("Failed to create window");
+		}
 	}
 
 	Window::~Window() {
