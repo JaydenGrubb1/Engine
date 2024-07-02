@@ -1,18 +1,7 @@
-cmake_minimum_required(VERSION 3.16)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON CACHE INTERNAL "")
 set(CMAKE_STATIC_LIBRARY_PREFIX "")
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 
 project(EngineCore) # TODO: Change project title
-enable_language(CXX)
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-add_compile_options(
-	-Wall
-	-Wextra
-	-Wpedantic
-	-Wold-style-cast
-)
 
 set(ENGINE_SRC
 	core/system.cpp

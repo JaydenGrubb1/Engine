@@ -50,7 +50,7 @@ namespace Engine::GFX {
 		vk::InstanceCreateInfo create_info(
 			{},
 			&app_info,
-			VALIDATION_LAYERS.size(), VALIDATION_LAYERS.data(),
+			static_cast<u32>(VALIDATION_LAYERS.size()), VALIDATION_LAYERS.data(),
 			0, nullptr
 		);
 		// TODO: Vulkan extensions
