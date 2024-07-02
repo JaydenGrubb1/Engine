@@ -13,7 +13,8 @@ list(TRANSFORM ENGINE_SRC PREPEND "${CMAKE_CURRENT_SOURCE_DIR}/src/")
 add_library(${PROJECT_NAME} SHARED ${ENGINE_SRC})
 
 find_package(Vulkan REQUIRED)
-find_package(SDL2 REQUIRED)
+find_package(SDL2 CONFIG REQUIRED)
+find_package(EnTT CONFIG REQUIRED)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "")
 
@@ -24,9 +25,11 @@ target_include_directories(${PROJECT_NAME}
 	${CMAKE_CURRENT_SOURCE_DIR}/src
 	${Vulkan_INCLUDE_DIRS}
 	${SDL2_INCLUDE_DIRS}
+	${EnTT_INCLUDE_DIRS}
 )
 
 target_link_libraries(${PROJECT_NAME}
 	Vulkan::Vulkan
 	SDL2::SDL2
+	EnTT::EnTT
 )
